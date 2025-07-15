@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>URL Encoder</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f7fa;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    textarea, input, button {
+      width: 100%;
+      font-size: 1rem;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .output {
+      background: #eef;
+      padding: 10px;
+      margin-top: 10px;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+  <h2>🔐 URL Encoder Sederhana</h2>
+  <p>Masukkan teks di bawah ini, lalu klik tombol encode untuk mendapatkan hasil URL-nya.</p>
+  <textarea id="inputText" rows="4" placeholder="Masukkan teks biasa..."></textarea>
+  <button onclick="encodeURL()">🔁 Encode</button>
+  <h3>Hasil URL Encoded:</h3>
+  <div class="output" id="outputText"></div>
+
+  <script>
+    function encodeURL() {
+      var input = document.getElementById("inputText").value;
+      var encoded = encodeURIComponent(input);
+      document.getElementById("outputText").textContent = encoded;
+    }
+  </script>
+</body>
+  </html>
